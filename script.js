@@ -12,7 +12,7 @@ botao.addEventListener("click", () => {
       🔬 Iniciando análise clínica...<br><br>
       ✔️ Inteligência acima da média<br>
       ✔️ Passou em Medicina (mérito total) 👩‍⚕️📚<br>
-      ❄️ Coração em modo econômico<br><br>
+      ❄️ Coração em modo econômico de emoções<br><br>
       Observação: ela não é fria,<br>
       é apenas criteriosa mesmo 😌
     `;
