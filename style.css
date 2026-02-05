@@ -2,52 +2,119 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
 }
 
 body {
-  height: 100vh;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  min-height: 100vh;
+  background: linear-gradient(135deg, #b3e5fc, #e1f5fe);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
 }
 
 .container {
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(10px);
-  padding: 30px;
-  border-radius: 20px;
+  background: white;
+  padding: 30px 25px;
   width: 90%;
   max-width: 420px;
+  border-radius: 20px;
   text-align: center;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.6s ease;
 }
 
 h1 {
+  font-size: 1.5rem;
   margin-bottom: 15px;
-  font-size: 1.6rem;
 }
 
-p {
+#texto {
   font-size: 1rem;
   line-height: 1.5;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
+}
+
+#iceberg {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  transition: transform 0.4s ease;
 }
 
 button {
-  background: #4fc3f7;
-  color: #002;
+  background: linear-gradient(135deg, #29b6f6, #0288d1);
+  color: white;
   border: none;
   padding: 12px 20px;
-  border-radius: 30px;
   font-size: 1rem;
+  border-radius: 25px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 button:hover {
-  background: #81d4fa;
-  transform: scale(1.05);
+  transform: scale(1.07);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+button:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.final {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("fundo.jpeg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  opacity: 1;
+  transition: opacity 1.2s ease;
+}
+
+
+.overlay {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  color: white;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 90%;
+  animation: fadeIn 1s ease;
+}
+
+
+.overlay h2 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+}
+
+.overlay p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.final.hidden {
+  display: none;
 }
