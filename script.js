@@ -26,7 +26,7 @@ function descongelar() {
   else {
     texto.innerText =
       "Conclusão: Carolzinha não é fria. Só não perde tempo com qualquer um 😉";
-    iceberg.innerText = "❤️‍🔥";
+    iceberg.innerText = "❤️";
     botao.innerText = "Encerrar expediente";
 
     document.body.style.background =
