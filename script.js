@@ -1,41 +1,15 @@
-let etapa = 0;
+const botao = document.getElementById("botao");
+const texto = document.getElementById("texto");
 
-function descongelar() {
-  const texto = document.getElementById("texto");
-  const iceberg = document.getElementById("iceberg");
-  const botao = document.querySelector("button");
+botao.addEventListener("click", () => {
+  texto.innerHTML = `
+    Atualização do sistema ❄️⚙️<br><br>
+    ❌ Coração totalmente congelado<br>
+    ✅ Senso de humor confirmado<br><br>
+    Brincadeiras à parte…<br>
+    parabéns pela Medicina 👩‍⚕️📚<br>
+    Deus honra quem se dedica.
+  `;
 
-  if (etapa === 0) {
-    texto.innerText =
-      "Iniciando avaliação clínica… afinal, futura médica entende do assunto 🩺";
-    iceberg.innerText = "🧊🩺";
-    botao.innerText = "Prosseguir com cautela";
-  } 
-  else if (etapa === 1) {
-    texto.innerText =
-      "Coração de gelo confirmado. Frio, estável e altamente seletivo.";
-    iceberg.innerText = "🧊❄️";
-    botao.innerText = "Aplicar método alternativo";
-  } 
-  else if (etapa === 2) {
-    texto.innerText =
-      "Observação inesperada: reage positivamente a café e boas risadas.";
-    iceberg.innerText = "🧊☕";
-    botao.innerText = "Finalizar laudo";
-  } 
-  else {
-    texto.innerText =
-      "Conclusão: Carolzinha não é fria. Só não perde tempo com qualquer um...";
-    iceberg.innerText = "❤️";
-    botao.innerText = "Encerrar expediente";
-
-    document.body.style.background =
-      "linear-gradient(180deg, #ff6b81, #ff4757)";
-
-    botao.disabled = true;
-    botao.style.opacity = "0.6";
-    botao.style.cursor = "default";
-  }
-
-  etapa++;
-}
+  botao.innerText = "Degelo parcial detectado 👀❄️";
+});
